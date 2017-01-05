@@ -1,0 +1,35 @@
+******************************Déja fait******************************   
+
+i)	Détection des plans : extraction de tous les plans > puis extraction plan le plus proche
+(la frame du plan le plus proche est retournée)
+ii)	 Extraction des éléments situés au dessus du plan sous forme de cluster (Pour l’instant objets situés a x cm au dessus du plan)
+iii)	Utilisation des clusters pour extraire l'image d'un l'objet (à partir de l'image rgb retournée par la caméra et des coordonnées des clusters)
+iv)	Phase de training:
+    a.	remplissage de la bdd  (dossier db)
+    b.	un dossier est créé pour chaque objet de la table 
+    c.	dossier contient:
+        i.	 image rgb de l'objet (cluster.png)
+        ii.	 clusters sous forme brut (cluster.pcd et cluster.txt)
+        iii.	 info.txt (contient: label, catégorie et autre information lié à l'objet)
+v)	Phase de détection:
+    a.	On indique via un topic le label d'un objet que l'on veut identifier ainsi qu'une catégorie (optionel)
+    b.	Si le label correspond au label d’un objet stocké dans la bdd alors le processus de comparaison entre l’image issue de la bdd et les images courantes des objets situés sur la tabletop est lancé (méthode de matching : surf …)
+    c.	Une information de présence ou non de l’objet demandé sur la tabletop est ensuite retourné
+    d.	Info retour ? pour l’instant erreur
+
+******************************A corriger/Améliorer******************************
+
+i)	Résoudre erreur
+ii)	Implémenter algorithme suivant (amélioration phase de detection):
+    a.	Demande au software ce qu’il y a sur la table
+    b.	Extraction des clusters correspondants aux  objets sur la table
+    c.	Comparaison des clusters avec les clusters des objets stockés en bdd afin de filtrer les objets non ressemblant avant de passer à la comparaison des images rgb
+    => !!!A améliorer!!! : méthode de comparaison des clusters
+    d.	Si match entre cluster alors les étapes suivantes sont réalisées
+    e.	Extraction de l’image rgb des objets situés sur la table
+    f.	Comparaison des images extraites avec images de la base de donnée (méthode de matching : surf …)
+    g.	Si concordance entre image alors l’objet est connu par le soft
+    h.	Donc possibilité de donné le nom des objets situés sur la table
+iii)	Remplacer texte en dur de info.txt en JSON 
++ mettre en place parsage JSON
+iv)	
