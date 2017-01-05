@@ -1,0 +1,42 @@
+Quickstart Guide
+workspace : evers_ws
+1.	Source 
+cd ../evers_ws
+source devel/setup.bash
+
+2.	Launch openni2
+roslaunch openni2_launch openni2.launch
+
+3.	Launch Rqt-reconfigure and check in camera>driver “depth_registration”
+rosrun rqt_reconfigure rqt_reconfigure
+	camera > driver > cocher « depth_registration »
+
+4.	Launch ORK-tabletop
+rosrun object_recognition_core detection -c `rospack find    object_recognition_tabletop`/conf/detection.table.ros.ork
+
+5.	Launch 
+roslaunch '/home/astrostudent/evers_ws/launch/evers_ws_recognition.launch'
+
+6.	Launch Rviz and display : filtered_cloud(Pointcloud2) to check what clusters are being processed
+         			         DetectedObjectsMarkers(Marker) to see what and where clusters have been detected
+	rviz
+
+Empty the database
+
+7.	To train (fill the db with the scene_objects)
+rosservice call /object_manager_srv train
+
+8.	Label the objetcs in db (in info.txt)
+
+9.	You can optionally change any param in the launch file situated in the root directory of the project, you ll need to relaunch after any changes
+
+10.	To launch a detection (Don’t forget to source)
+rostopic pub discrim_status object_discrimination/DetectionInput "{'mode':'detect','label':['can']}"
+
+11.	If the discrimination node launch is commented in launch file , launch the node with this command line:
+source devel/setup.bash
+rosrun object_discrimination Objectdiscrimination 
+
+
+
+
