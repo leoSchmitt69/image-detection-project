@@ -20,7 +20,7 @@ v)	Phase de détection:
 ******************************A corriger/Améliorer******************************
 
 i)	Résoudre erreur
-ii)	Implémenter algorithme suivant (amélioration phase de detection):
+ii)	Implémenter algorithme suivant (amélioration phase de detection - !!! créer nouveau noeud ros):
     a.	Demande au software ce qu’il y a sur la table
     b.	Extraction des clusters correspondants aux  objets sur la table
     c.	Comparaison des clusters avec les clusters des objets stockés en bdd afin de filtrer les objets non ressemblant avant de passer à           la comparaison des images rgb
