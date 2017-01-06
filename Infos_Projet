@@ -41,7 +41,7 @@ vii) script python qui modifie nom dossier db à partir de info.txt
 viii) Modification phase d'apprentissage : laisser la possibilité au user de nommer directement un objet détecté (pour eviter d'avoir a changer le label dans info.txt)
 
 ****************************** En cours ******************************
-i) remplissage bdd
+i) Amélioration training > possibilité de donner le label et la category d'un objet lors du training (seulement si l'objet est seul sur la table)
 ii) réfléchir autre caractéristique de comparaison des clusters
 iii) mettre en place new methodes de fitting
 
