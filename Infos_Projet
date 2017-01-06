@@ -33,7 +33,8 @@ ii)	Implémenter algorithme suivant (amélioration phase de detection - !!! cré
 iii) Remplacer texte en dur de info.txt en JSON 
 + mettre en place parsage JSON
 iv)	Multi-threading pour optimisation processus de filtrage bdd
-
+v) améliorer robustesse
+vi) changer chemins absolus en chemins relatifs
 
 ****************************** Fait ******************************
 i) Correction erreur detection avec rostopic pub ..."{'mode':'detect','label':['all']}" > gestion du cas ou aucune catégorie n'est spécifiée
