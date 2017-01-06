@@ -38,7 +38,7 @@ iv)	Multi-threading pour optimisation processus de filtrage bdd
 v) améliorer robustesse
 vi) changer chemins absolus en chemins relatifs
 vii) script python qui modifie nom dossier db à partir de info.txt
-viii) Modification phase d'apprentissage : laisser la possibilité au user de nommer directement un objet détecté (pour eviter d'avoir a changer le lable dans info.txt)
+viii) Modification phase d'apprentissage : laisser la possibilité au user de nommer directement un objet détecté (pour eviter d'avoir a changer le label dans info.txt)
 
 ****************************** En cours ******************************
 i) remplissage bdd
