@@ -42,6 +42,8 @@ viii) Modification phase d'apprentissage : laisser la possibilité au user de no
 
 ****************************** En cours ******************************
 i) Amélioration training > possibilité de donner le label et la category d'un objet lors du training (seulement si l'objet est seul sur la table)
+        !!! sizeof() !=1 > pas bon, a modifier > on ne test pas si il y a un seul cluster!!!
+
 ii) réfléchir autre caractéristique de comparaison des clusters
 iii) mettre en place new methodes de fitting
 
