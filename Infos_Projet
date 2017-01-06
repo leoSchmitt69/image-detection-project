@@ -31,12 +31,13 @@ v)	Phase de détection (cf quick start guide pour les noeuds ros à lancer)::
             
 ******************************A corriger/Améliorer******************************
 i) amélioration méthode matching image rgb ?
-ii) !!!A améliorer!!! : méthode de comparaison des clusters
+ii) amélioration méthode de comparaison des clusters
 iii) Remplacer texte en dur de info.txt en JSON 
 + mettre en place parsage JSON
 iv)	Multi-threading pour optimisation processus de filtrage bdd
 v) améliorer robustesse
 vi) changer chemins absolus en chemins relatifs
+vii) script python qui modifie nom dossier db à partir de info.txt
 
 ****************************** En cours ******************************
 i) remplissage bdd
