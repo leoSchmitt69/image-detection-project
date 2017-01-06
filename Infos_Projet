@@ -1,8 +1,8 @@
 ******************************Déja fait******************************   
 
-i)	Détection des plans : extraction de tous les plans > puis extraction plan le plus proche
-(la frame du plan le plus proche est retournée)
-ii)	 Extraction des éléments situés au dessus du plan sous forme de cluster (Pour l’instant objets situés a x cm au dessus du plan)
+i)	Détection des plans : extraction de toutes les surfaces planes situées face à la caméra > puis extraction du plan le plus proche
+        >la frame du plan le plus proche est retournée permettant de connaitre la position de la table par rapport au robot.
+ii)	 Extraction des objets situés au dessus du plan sous forme de cluster (Pour l’instant objets situés a x cm au dessus du plan)
 iii) Utilisation des clusters pour extraire l'image d'un l'objet (à partir de l'image rgb retournée par la caméra et des coordonnées             des clusters)
 iv)	Phase de training:
     a.	remplissage de la bdd  (dossier db)
@@ -33,3 +33,7 @@ ii)	Implémenter algorithme suivant (amélioration phase de detection - !!! cré
 iii) Remplacer texte en dur de info.txt en JSON 
 + mettre en place parsage JSON
 iv)	Multi-threading pour optimisation processus de filtrage bdd
+
+
+****************************** Fait ******************************
+i) Correction erreur detection avec rostopic pub ..."{'mode':'detect','label':['all']}" > gestion du cas ou aucune catégorie n'est spécifiée
