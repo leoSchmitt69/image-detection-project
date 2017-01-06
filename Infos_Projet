@@ -32,7 +32,7 @@ v)	Phase de détection (cf quick start guide pour les noeuds ros à lancer)::
 ******************************A corriger/Améliorer******************************
 i) amélioration méthode matching image rgb ?
 ii) amélioration méthode de comparaison des clusters
-iii) Remplacer texte en dur de info.txt en JSON 
+iii) Remplacer texte en dur de info.txt en JSON  (dans FileSystemDao.cpp > saveAllObject)
 + mettre en place parsage JSON
 iv)	Multi-threading pour optimisation processus de filtrage bdd
 v) améliorer robustesse
