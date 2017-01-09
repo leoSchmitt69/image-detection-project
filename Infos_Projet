@@ -2,6 +2,7 @@
 
 i)	Détection des plans : extraction de toutes les surfaces planes situées face à la caméra (framework déja existant : ORK) > puis extraction du plan le plus proche et horizontale (utilsation d'un second filtre)
         >la frame du plan le plus proche est retournée permettant de connaitre la position de la table par rapport au robot.
+        Note: Pour que la detection de la table et des objets fonctionne correctement, il faut que la table soit située bien en face de la caméra, au 1er plan.
 ii)	 Extraction des objets situés au dessus du plan sous forme de cluster (Pour l’instant objets situés a x cm au dessus du plan)
 iii) Utilisation des clusters pour extraire l'image d'un l'objet (à partir de l'image rgb retournée par la caméra et des coordonnées des clusters)
 iv)	Phase de training (cf quick start guide pour les noeuds ros à lancer):
