@@ -31,6 +31,7 @@ v)	Phase de détection (cf quick start guide pour les noeuds ros à lancer)::
             h.	Donc possibilité de donné le nom des objets situés sur la table
             
 ******************************A corriger/Améliorer******************************
+!!!! dans FileSystemDao.cpp >> DB_DIRECTORY = chemin absolu et non relatif
 i) amélioration méthode matching image rgb ?
 ii) amélioration méthode de comparaison des clusters
 iii) Remplacer texte en dur de info.txt en JSON  (dans FileSystemDao.cpp > saveAllObject)
