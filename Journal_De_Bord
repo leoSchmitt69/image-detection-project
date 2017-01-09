@@ -69,4 +69,8 @@ Correction erreur nocategory
 
 
 ************ 06/01/2017
+1 object training (object save in database with label and category given during training)
+	> class modified : Objectmanager.cpp
 
+*********** 09/01/2017
+1 object training (bug correction)
