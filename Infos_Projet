@@ -63,3 +63,13 @@ iii) mettre en place new methodes de fitting
 ****************************** Nos modifications ******************************
 i) Correction erreur detection avec rostopic pub ..."{'mode':'detect','label':['all']}" > gestion du cas ou aucune catégorie n'est spécifiée
         > classe modifiée : Objectdiscrimination
+
+ii) JSON ok (à compléter - qu'est ce qui a été fait + classes modifiées)
+
+iii) Projet sur PC portable ok
+
+iv) Phase training (parler du training pour un objet)
+
+
+
+
