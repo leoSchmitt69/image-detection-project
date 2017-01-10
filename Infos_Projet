@@ -1,17 +1,21 @@
-******************************Fait******************************   
+******************************COMPREHENSION DU PIPELINE DE TRAINING/DETECTION******************************   
 
 i)	Détection des plans : extraction de toutes les surfaces planes situées face à la caméra (framework déja existant : ORK) > puis extraction du plan le plus proche et horizontale (utilsation d'un second filtre)
         >la frame du plan le plus proche est retournée permettant de connaitre la position de la table par rapport au robot.
         Note: Pour que la detection de la table et des objets fonctionne correctement, il faut que la table soit située bien en face de la caméra, au 1er plan.
+        
 ii)	 Extraction des objets situés au dessus du plan sous forme de cluster (Pour l’instant objets situés a x cm au dessus du plan)
+
 iii) Utilisation des clusters pour extraire l'image d'un l'objet (à partir de l'image rgb retournée par la caméra et des coordonnées des clusters)
-iv)	Phase de training (cf quick start guide pour les noeuds ros à lancer):
-    a.	remplissage de la bdd  (dossier db)
+
+iv)	Phase de training (cf quick start guide pour les noeuds ros à lancer): Attention peut s'effectuer via " call service /object_srv train " ou selon le "rosrun object_discrimination Objectdiscrimination " +  rostopic pub discrim_status object_discrimination/DetectionInput "{'mode':'new_db_objects','label':['bean','can' etc..]}"
+a.	remplissage de la bdd  (dossier db)
     b.	un dossier est créé pour chaque objet de la table 
     c.	dossier contient:
         i.	 image rgb de l'objet (cluster.png)
         ii.	 clusters sous forme brut (cluster.pcd et cluster.txt)
         iii.	 info.txt (contient: label, catégorie et autre information lié à l'objet)
+
 v)	Phase de détection (cf quick start guide pour les noeuds ros à lancer)::
     1ère possibilité:
             a.	On indique via un topic le label d'un objet que l'on veut identifier ainsi qu'une catégorie (optionel)
@@ -43,6 +47,7 @@ v) améliorer robustesse
 vi) changer chemins absolus en chemins relatifs
 vii) script python qui modifie nom dossier db à partir de info.txt
 viii) Modification phase d'apprentissage : laisser la possibilité au user de nommer directement un objet détecté (pour eviter d'avoir a changer le label dans info.txt)
+IX) Modification de la classe Objectdiscrimination: il y a un mode "new_objects_db" qui remplace le mode train amélioré précédement. (A voir)
 
 ****************************** En cours ******************************
 i) Amélioration training > possibilité de donner le label et la category d'un objet lors du training (seulement si l'objet est seul sur la table)
