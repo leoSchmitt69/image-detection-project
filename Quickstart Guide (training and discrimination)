@@ -40,7 +40,11 @@ workspace : evers_ws
 
 11.	To launch a detection (Don’t forget to source)
 		
-		rostopic pub discrim_status object_discrimination/DetectionInput "{'mode':'detect','label':['can']}"
+		4 possibilities:
+		1) rostopic pub discrim_status object_discrimination/DetectionInput "{'mode':'detect','label':['all'],'category':['all']}"
+		2) rostopic pub discrim_status object_discrimination/DetectionInput "{'mode':'detect','label':['all'],'category':['fruit']}"
+		3) rostopic pub discrim_status object_discrimination/DetectionInput "{'mode':'detect','label':['apple'],'category':['all']}"
+		4) rostopic pub discrim_status object_discrimination/DetectionInput "{'mode':'detect','label':['apple'],'category':['fruit']}"
 
 12.	If the discrimination node launch is commented in launch file , launch the node with this command line:
 		
