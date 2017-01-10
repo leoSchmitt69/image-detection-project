@@ -45,7 +45,7 @@ viii) Modification phase d'apprentissage : laisser la possibilité au user de no
 
 ****************************** En cours ******************************
 i) Amélioration training > possibilité de donner le label et la category d'un objet lors du training (seulement si l'objet est seul sur la table)
-       Commande ros : rosservice call /train_one_object_srv *label* *category* (if category is not written, thus "nocategory" is assigned by default)
+       Commande ros : rosservice call /train_one_object_srv *label* *category* 
        Problème à prendre en compte: si l'utilisateur ne voit qu'un objet alors que la caméra en detecte 2 => erreur
        !!! sizeof() !=1 > pas bon, a modifier > on ne test pas si il y a un seul cluster!!!
        Problème corrigé.
