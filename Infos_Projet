@@ -35,6 +35,7 @@ v)	Phase de détection (cf quick start guide pour les noeuds ros à lancer)::
             h.	Donc possibilité de donné le nom des objets situés sur la table
             
 ******************************A corriger/Améliorer******************************
+!!!!!!!!!!category peut avoir plusieurs éléments (cf Objectdiscrimination > discrimination_manager()), checker si modifs qu'on à fait ok
 !!!! dans FileSystemDao.cpp >> DB_DIRECTORY = chemin absolu et non relatif
 !!!! remttre DaoMng dans launch
 remplir bdd avec bcp d'élement pour regarder temps de calcul
