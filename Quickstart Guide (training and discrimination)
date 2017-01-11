@@ -32,7 +32,9 @@ workspace : evers_ws
 
 8.	To train (fill the db with the scene_objects)
 		
-		rosservice call /object_manager_srv train
+		2 ways to do training:
+		1) rosservice call /object_manager_srv train
+		2) rosservice call /train_one_object_srv *label* *category* 
 
 9.	Label the objetcs in db (in info.txt)
 
