@@ -40,6 +40,8 @@ v)	Phase de détection (cf quick start guide pour les noeuds ros à lancer)::
 !!!! remttre DaoMng et object_extract dans launch
 !!!! améliorer affichage detection (dans Objectdiscrimination.cpp)
 !!!! si prblm penser à mettre caméra bien en face jusqu'a 
+!!!! créer procédure démo (feuille blanche position objets sur table, prosition précise de la caméra % à la table ...)
+Lister points à amérliorer et pblm ...!
 remplir bdd avec bcp d'élement pour regarder temps de calcul
 i) amélioration méthode matching image rgb ?
 ii) amélioration méthode de comparaison des clusters
