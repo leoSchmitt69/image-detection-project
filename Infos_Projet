@@ -37,6 +37,7 @@ v)	Phase de détection (cf quick start guide pour les noeuds ros à lancer)::
 ******************************A corriger/Améliorer******************************
 !!!!!!!!!! Objectdiscrimination > discrimination_manager() > si plus de 1 label et 1 seule catégorie alors erreur (peut etre d'autres cas d'erreur)
 !!!! dans FileSystemDao.cpp >> DB_DIRECTORY = chemin absolu et non relatif
+!!! clean commentaires
 !!!! remttre DaoMng et object_extract dans launch
 !!!! améliorer affichage detection (dans Objectdiscrimination.cpp)
 !!!! si prblm penser à mettre caméra bien en face jusqu'a 
