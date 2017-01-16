@@ -39,6 +39,7 @@ v)	Phase de détection (cf quick start guide pour les noeuds ros à lancer)::
 2)))))  créer procédure démo (feuille blanche position objets sur table, prosition précise de la caméra % à la table ...)
 3))))) présentation + rendu + video
 4))))) explications ce qui à été fait + modif apportées/schéma des classes ...
+5))))) enlever partie code qui crée info.txt (verifier si ça pose pblm pour certaines parties)
 
 !!! changer pointer en references
 !!! Faire tests avec label et category différents de all
