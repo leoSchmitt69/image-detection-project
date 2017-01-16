@@ -1,7 +1,11 @@
-Quickstart Guide
+********************************************************** Quickstart Guide **********************************************************
+**************************************************************************************************************************************
 
-workspace : evers_ws
+Workspace : evers_ws
 
+In order to perform object training and detection, the following steps have to be done:
+
+***Launch environment***:
 1.	Source 
 		cd ../evers_ws
 		source devel/setup.bash
@@ -28,29 +32,39 @@ workspace : evers_ws
 		
 		rviz
 
-7. 	Empty the database
+***Training***:
 
 8.	To train (fill the db with the scene_objects)
 		
-		2 ways to do training:
-		1) rosservice call /object_manager_srv train
-			Label the objetcs in db (in info.json)
-		2) rosservice call /train_one_object_srv *label* *category* 
+	 	2 ways to do training:
+		1) Training with many objects on the table
+			rosservice call /object_manager_srv train
 
-10.	You can optionally change any param in the launch file situated in the root directory of the project, you ll need to relaunch after any changes
+			Note: The label and category of each object in db has to be written in info.json
 
-11.	To launch a detection (Don’t forget to source)
-		
-		4 possibilities:
-		1) rostopic pub discrim_status object_discrimination/DetectionInput "{'mode':'detect','label':['all'],'category':['all']}"
-		2) rostopic pub discrim_status object_discrimination/DetectionInput "{'mode':'detect','label':['all'],'category':['fruit']}"
-		3) rostopic pub discrim_status object_discrimination/DetectionInput "{'mode':'detect','label':['apple'],'category':['all']}"
-		4) rostopic pub discrim_status object_discrimination/DetectionInput "{'mode':'detect','label':['apple'],'category':['fruit']}"
+		2) Training with one object on the table 			
+			rosservice call /train_one_object_srv *label* *category* 
 
-12.	If the discrimination node launch is commented in launch file , launch the node with this command line:
-		
-		source devel/setup.bash
+			Note 1: this service allows to give a label and a category during the training phase of an object in 					        order to do not have to write them by opening the info.json
+			Note 2: if the service doesn't work it can come from the fact that the camera detects an object that 						you didn't expected
+
+***Detection***:
+
+9.	In order to perform all the detection steps and to see there results, the following node has to be run:
+		(source devel/setup.bash)
 		rosrun object_discrimination Objectdiscrimination 
+
+10.	To launch a detection (Don’t forget to source)
+		
+	4 possibilities (example):
+	1) rostopic pub discrim_status object_discrimination/DetectionInput "{'mode':'detect','label':['all'],'category':['all']}"
+	2) rostopic pub discrim_status object_discrimination/DetectionInput "{'mode':'detect','label':['all'],'category':['cat1']}"
+	3) rostopic pub discrim_status object_discrimination/DetectionInput "{'mode':'detect','label':['bean'],'category':['all']}"
+	4) rostopic pub discrim_status object_discrimination/DetectionInput "{'mode':'detect','label':['bean'],'category':['cat1']}"
+
+
+		
+		
 
 
 
