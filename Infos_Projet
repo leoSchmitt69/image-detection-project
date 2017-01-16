@@ -41,6 +41,7 @@ v)	Phase de détection (cf quick start guide pour les noeuds ros à lancer)::
 4))))) explications ce qui à été fait + modif apportées/schéma des classes ...
 5))))) enlever partie code qui crée info.txt (verifier si ça pose pblm pour certaines parties)
 6))))) tester si train tout court ecrit dans json
+7))))) ecrire methode dans json
 
 !!! changer pointer en references
 !!! Faire tests avec label et category différents de all
