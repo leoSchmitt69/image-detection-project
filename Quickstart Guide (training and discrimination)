@@ -36,7 +36,7 @@ workspace : evers_ws
 		1) rosservice call /object_manager_srv train
 		2) rosservice call /train_one_object_srv *label* *category* 
 
-9.	Label the objetcs in db (in info.txt)
+9.	Label the objetcs in db (in info.json)
 
 10.	You can optionally change any param in the launch file situated in the root directory of the project, you ll need to relaunch after any changes
 
