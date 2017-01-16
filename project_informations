@@ -1,0 +1,48 @@
+**************** What the software already does (cf quickstart_guide to get the ROS commands to launch): *********************   
+******************************************************************************************************************************
+
+i)	Plans detection: all plans (flat surfaces) located in front of the camera are retrieved by using the existing framework ORK.
+    Then, the closer and horizontal plan is set apart by using a second filter.
+    Note: the frame of this closer plan is created allowing to know its position compared to the camera.
+        
+ii)	 The objects located on the table are retrieved as cluster (cluster = dynamic point cloud of an object).
+
+
+iii) These clusters can be used to perform two different actions:
+    1) Object training
+    2) Object detection (using cluster and rgb image of the object)
+      Note : rgb image of an object retrieval is done by using the rgb image of the scene coming from the camera and the coordinates of       the points from this object's cluster
+
+iv) Traing part: 
+      An object is saved in the database through different files (located in a new folder named by the object's label followed by its         uid):
+      1) info.json : contains all information concerning the object (label, category, uid, height, width, depth ...)
+      3) cluster.png : correspond to the extracted rgb image of an object from the scene image
+      4) cluster.pcd : contains the coordinates (x,y,z) of each point of the cluster
+      4) cluster.txt : contains the index of each point of the point of the cluster
+   
+v) Detection part:
+    The user can perform detection with 4 differents possibilities:
+    1) Asking if one (or more) object with a given label on the table is(are) known by the robot (=saved in database)
+      > all the objects of the db with this label will be compared with all the scene objects.
+    2) Asking if one (or more) object with a given category on the table is(are) known by the robot (=saved in database)
+      > all the objects of the db with this category will be compared with all the scene objects.
+    3) Asking if one (or more) object with a given label AND a given category on the table is(are) known by the robot (=saved in             database)
+      > all the objects of the db with this label AND this category will be compared with all the scene objects.
+    4) Asking what object on the table are known by the robot (=saved in database)
+      > all the objects of the db will be compared with all the scene objects.
+    
+    
+    The detection part is done within 2 parts:
+    1) Discrimination by using cluster : this step consist in comparing 2 objects (a db object and a scene object) by using informations        extracted from cluster (for the db object, the cluster information are retrieved from cluster.pcd and for the scene object the          cluster information are retrieved directly).
+       This step allows to do db filtering in order to decrease the number of objets compared during the 2nd step (because of the high          processing requirement).
+       For the moment the informations used to compare two objects are: height, width, depth and volume.
+   
+    2) Detection by comparing rgb image of objects (from database and from scene) with one of the opencv methods (surf, orb ...)
+    
+    
+*************************************************** What can be improved : ***************************************************
+******************************************************************************************************************************
+i) For the moment, the camera has to be positionned directly in front of the table/plan where the objects are put on, otherwise this        plan won't be retrieved all the time.  
+ii) Create other discrimination methods.
+
+
