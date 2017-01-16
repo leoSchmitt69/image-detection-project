@@ -35,29 +35,26 @@ v)	Phase de détection (cf quick start guide pour les noeuds ros à lancer)::
             h.	Donc possibilité de donné le nom des objets situés sur la table
             
 ******************************A corriger/Améliorer******************************
-1))))) clean code et amélioration interface discretisation
-2)))))  créer procédure démo (feuille blanche position objets sur table, prosition précise de la caméra % à la table ...)
-3))))) présentation + rendu + video
-4))))) explications ce qui à été fait + modif apportées/schéma des classes ...
-5))))) enlever partie code qui crée info.txt (verifier si ça pose pblm pour certaines parties)
-6))))) tester si train tout court ecrit dans json
-7))))) ecrire methode dans json
 
-!!! changer pointer en references
+2)))))  créer procédure démo (feuille blanche position objets sur table, prosition précise de la caméra % à la table ...)
+3))))) présentation + rendu
+!!!!video
+
+4))))) explications ce qui à été fait + modif apportées/schéma des classes ...+ quelle classe fait quoi
+                +expliquer systeme de matching (object discrimination)
+
+5))))) enlever partie code qui crée info.txt (verifier si ça pose pblm pour certaines parties)
+7))))) ecrire method dans json
+
+
 !!! Faire tests avec label et category différents de all
-!!!!!!!!!! Objectdiscrimination > discrimination_manager() > si plus de 1 label et 1 seule catégorie alors erreur (peut etre d'autres cas d'erreur)
+!!!!!!!!!! Objectdiscrimination > discrimination_manager() > si plus de 1 label et 1 seule catégorie alors erreur (peut etre d'autres cas d'erreur) (a mettre dans amélioration)
+
 
 !!! clean commentaires
 !!!! remttre DaoMng et object_extract dans launch
-!!!! améliorer affichage detection (dans Objectdiscrimination.cpp)
-!!!! si prblm penser à mettre caméra bien en face jusqu'a 
-!!!! créer procédure démo (feuille blanche position objets sur table, prosition précise de la caméra % à la table ...)
-Lister points à amérliorer et pblm ...!
-faire schéma des classes (et expliquer ce que chacune fait)
-remplir bdd avec bcp d'élement pour regarder temps de calcul
 
-viii) Modification phase d'apprentissage : laisser la possibilité au user de nommer directement un objet détecté (pour eviter d'avoir a changer le label dans info.txt)
-IX) Modification de la classe Objectdiscrimination: il y a un mode "new_objects_db" qui remplace le mode train amélioré précédement. (A voir)
+matching > elargir marge erreur
 
 ****************************** En cours ******************************
 i) Amélioration training > possibilité de donner le label et la category d'un objet lors du training (seulement si l'objet est seul sur la table)
@@ -80,6 +77,7 @@ iii) Projet sur PC portable ok
 
 iv) Phase training (parler du training pour un objet)
 
+v) améliorer affichage detection (dans Objectdiscrimination.cpp)
 
 
 
