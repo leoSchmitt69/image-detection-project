@@ -43,6 +43,9 @@ v) Detection part:
 *************************************************** What can be improved : ***************************************************
 ******************************************************************************************************************************
 i) For the moment, the camera has to be positionned directly in front of the table/plan where the objects are put on, otherwise this        plan won't be retrieved all the time.  
+
 ii) Create other discrimination methods.
+
+iii) Identify the object of the scene which has matched ...
 
 
